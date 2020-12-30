@@ -2,7 +2,7 @@ const {default: axios} = require('axios');
 const isEmpty = require('../../utils/isEmpty');
 const router = require('express').Router()
 
-router.get("/bydate", async (req, res) => {
+router.put("/bydate", async (req, res) => {
   try {
 
     const {year, month, day} = req.body;
