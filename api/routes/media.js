@@ -2,6 +2,7 @@ const {default: axios} = require('axios');
 const isEmpty = require('../../utils/isEmpty');
 const router = require('express').Router()
 
+
 router.put("/bydate", async (req, res) => {
   try {
 
@@ -17,7 +18,7 @@ router.put("/bydate", async (req, res) => {
 
     axios.get(endpoint)
     .then(response => {
-      res.json({data: response.data})
+      res.json(response.data)
     })
     .catch(err => {
       res.status(500).json({error: err.message})
